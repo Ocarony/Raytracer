@@ -1,0 +1,26 @@
+#ifndef BUW_SHAPE_HPP
+#define BUW_SHAPE_HPP
+
+
+#include <iostream>
+#include <glm/glm.hpp>
+#include "colorrgb.hpp"
+#include <string>
+#include "Ray.hpp"
+
+class Shape
+{
+	public:
+		Shape():
+			color_{0},
+			name_{"Shape"}	{} 
+		Shape(ColorRGB const& color, string name):
+			color_{color},
+			name_{name} {}
+		
+		virtual ~Shape(){}
+
+protected:
+		ColorRGB color_;
+		string name_;
+}
